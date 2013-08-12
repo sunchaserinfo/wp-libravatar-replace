@@ -50,13 +50,18 @@ function libravatar_is_ssl()
 
 function libravatar_avatar_defaults_filter_callback( $avatar_defaults )
 {
-	$avatar_defaults['libravatar_default'] = __('Libravatar Logo');
+	$avatar_defaults['libravatar_default']   = __('Libravatar Logo');
+	$avatar_defaults['libravatar_mm']        = __('Libravatar Mystery Man');
+	$avatar_defaults['libravatar_identicon'] = __('Libravatar Identicon');
+	$avatar_defaults['libravatar_monsterid'] = __('Libravatar Monster ID');
+	$avatar_defaults['libravatar_wavatar']   = __('Libravatar Wavatar');
+	$avatar_defaults['libravatar_retro']     = __('Libravatar Retro');
 	return $avatar_defaults;
 }
 
 function libravatar_get_avatar_filter_callback( $avatar, $id_or_email, $size, $default, $alt )
 {
-	if( 'libravatar_default' == $default )
+	if (preg_match('/^libravatar_(.*)$/', $default, $matches))
 	{
 		if( false === $alt)
 		{
@@ -106,7 +111,9 @@ function libravatar_get_avatar_filter_callback( $avatar, $id_or_email, $size, $d
 		$options['s'] = $size;
 		$options['algorithm'] = 'md5';
 		$options['https'] = libravatar_is_ssl();
-		//$options['d'] = ( $options['https'] == true ? 'https://sec' : 'http://' ) . 'cdn.libravatar.org/nobody/60.png';
+		if ($matches[1] !== 'default') {
+			$options['d'] = $matches[1];
+		}
 		$url = $libravatar->url( $email, $options );
 
 		$avatar = "<img alt='{$safe_alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
