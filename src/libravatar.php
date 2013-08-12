@@ -4,9 +4,11 @@
  Plugin URI: http://code.sunchaser.info/libravatar
  Description: Libravatar support for WordPress and BuddyPress
  Version: 2.0.0
- Author: Christian Archer, based on work by Gabriel Hautclocq
+ Author: Christian Archer
  Author URI: https://sunchaser.info/
  License: ISC
+ Initial Author: Gabriel Hautclocq
+ Initial Author URI: http://www.gabsoftware.com/
 */
 
 //error_reporting( E_ALL );
