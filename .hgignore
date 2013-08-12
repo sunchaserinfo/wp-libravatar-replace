@@ -1,0 +1,5 @@
+syntax: regex
+^\.idea/.*
+
+syntax: glob
+*.iml
