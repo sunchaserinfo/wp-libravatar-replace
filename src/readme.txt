@@ -3,7 +3,7 @@ Contributors: SunChaser, GabSoftware
 Tags: libravatar, avatar, support, user, email, pseudo, picture, image, buddypress
 Requires at least: 3.6
 Tested up to: 3.6
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 
 Replaces Gravatar with Libravatar in your WordPress installation.
 
@@ -25,7 +25,7 @@ Just extract the plugin directory into your wp-content/plugins directory.
 
 == Frequently Asked Questions ==
 = What are the requirements of this plugin? =
-PHP 5 is required, PHP 5.3 is strongly encouraged
+PHP 5 is required, PHP 5.3 is strongly recommended
 
 == Thanks to ==
 * Gabriel Hautclocq, author of the initial plugin
@@ -33,16 +33,23 @@ PHP 5 is required, PHP 5.3 is strongly encouraged
 
 == Changelog ==
 
+= 2.0.1 =
+* 'blank' Gravatar default fixed and reimplemented
+
 = 2.0.0 =
 (Differences from the Libravatar plugin)
 * Updated Services_Libravatar with SRV port discovery fix
-* The plugin tries to completely replace Libravatar with Gravatar
+* The plugin tries to completely replace Gravatar with Libravatar
 * Beta support for BuddyPress
+
+= 1.0.4 =
+(never released)
+* Support for different fallbacks for the Libravatar
 
 = 1.0.3 =
 * Initial fork of the Libravatar plugin
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-* Thank you for using the Libravatar plugin!
+= 2.0.0 =
+* Thank you for using the Libravatar Replace plugin!

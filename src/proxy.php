@@ -1,6 +1,7 @@
 <?php
 /**
-  A proxy file for gravatar defaults that are not supported by libravatar
+  A proxy file for Gravatar defaults that are not supported by Libravatar
+  created for Libravatar Replace v2.0.1
  */
 
 $request = $_SERVER['REQUEST_URI'];
