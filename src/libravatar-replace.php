@@ -55,9 +55,10 @@ class LibravatarReplace
 	 * @param array $avatar_defaults
 	 * @return mixed
 	 */
-	function filterAvatarDefaultsCallback($avatar_defaults)
+	function filterAvatarDefaults($avatar_defaults)
 	{
 		$avatar_defaults['gravatar_default'] = __('Libravatar Logo'); // rename accordingly
+		unset($avatar_defaults['blank']); // todo: find a way to replace blank
 		return $avatar_defaults;
 	}
 
@@ -71,7 +72,7 @@ class LibravatarReplace
 	 * @param string $alt
 	 * @return string avatar HTML
 	 */
-	function filterGetAvatarCallback($avatar, $id_or_email, $size, $default, $alt)
+	function filterGetAvatar($avatar, $id_or_email, $size, $default, $alt)
 	{
 		if (false === $alt)
 		{
@@ -120,10 +121,12 @@ class LibravatarReplace
 		$options['https'] = $this->isSsl();
 		if ($default && $default !== 'gravatar_default')
 		{
+			/* TODO: replace 'blank' somehow
 			if ($default === 'blank')
 			{
 				$default = 'http://www.gravatar.com/avatar/00000000000000000000000000000000?d=blank&s=' . $size;
 			}
+			*/
 			$options['d'] = $default;
 		}
 		$url = $libravatar->url($email, $options);
