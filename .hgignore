@@ -1,4 +1,4 @@
-syntax: regex
+syntax: regexp
 ^\.idea/.*
 
 syntax: glob
