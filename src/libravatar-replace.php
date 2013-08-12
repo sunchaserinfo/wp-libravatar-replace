@@ -17,37 +17,7 @@ if (!defined('WP_PLUGIN_DIR'))
 	die('There is nothing to see here!');
 }
 
-// prefer system Services_Libravatar and let's hope it's patched
-if (class_exists('Services_Libravatar', false) === false
-{
-	require_once('Services_Libravatar.php');
-} 
-else 
-{
-	function libravatar_replace_class_already_exists()
-	{
-		if (defined('LIBRAVATAR_VERSION_MAJ')) // we have Libravatar plugin — show error message
-		{
-			?>
-				<div class="error">
-					<b>Error!</b> It looks that you are using both Libravatar and Libravatar Replace plugins.
-					Please disable or remove Libravatar plugin as they are not compatible.
-				</div>
-			<?php
-		}
-		else
-		{
-			?>
-				<div class="updated">
-					<b>Notice:</b> It looks that your system somehow already has the Services_Libravatar library installed.
-					Please make sure that it's up-to-date and has SRV port discovery patch applied.
-				</div>
-			<?php
-		}
-	}
-	
-	add_action ('admin_notices', 'libravatar_replace_class_already_exists');
-}
+require_once('Services_Libravatar.php');
 
 /**
  * Class LibravatarReplace

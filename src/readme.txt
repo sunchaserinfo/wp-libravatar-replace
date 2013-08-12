@@ -13,6 +13,10 @@ Replaces Gravatar with Libravatar in your WordPress installation.
 Adds <a href="http://www.libravatar.org">Libravatar</a> avatars support to your WordPress installation. Libravatar is an alternative to Gravatar and its API is mostly compatible.
 </p>
 
+<p>
+<b>Warning!</b> The plugin is incompatible with it's predecessor, the Libravatar plugin. Please remove or disable it before installing this plugin.
+</p>
+
 == Installation ==
 
 <p>
