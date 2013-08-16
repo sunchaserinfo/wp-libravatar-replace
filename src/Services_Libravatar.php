@@ -544,6 +544,7 @@ class Services_Libravatar
      *                    - "monsterid"
      *                    - "wavatar"
      *                    - "retro"
+     *                    - "blank"
      *
      * @return string Default URL
      *
@@ -564,6 +565,7 @@ class Services_Libravatar
         case 'monsterid':
         case 'wavatar':
         case 'retro':
+        case 'blank':
             break;
         default:
             $valid = filter_var($url, FILTER_VALIDATE_URL);

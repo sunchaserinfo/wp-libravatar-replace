@@ -118,10 +118,6 @@ class LibravatarReplace
 		$options['https'] = $this->isSsl();
 		if ($default && $default !== 'gravatar_default')
 		{
-			if ($default === 'blank')
-			{
-				$default = plugins_url('proxy.php' , __FILE__). '/'. md5($email) .'/blank/'. $size .'.png';
-			}
 			$options['d'] = $default;
 		}
 		$url = $libravatar->url($email, $options);
