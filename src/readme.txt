@@ -33,6 +33,10 @@ PHP 5 is required, PHP 5.3 is strongly recommended
 
 == Changelog ==
 
+= 2.0.2
+* No special blank treatment - it just works
+* Public WordPress.org release
+
 = 2.0.1 =
 * 'blank' Gravatar default fixed and reimplemented
 
