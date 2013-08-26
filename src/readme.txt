@@ -33,6 +33,9 @@ PHP 5 is required, PHP 5.3 is strongly recommended
 
 == Changelog ==
 
+= 2.0.3 =
+* Default images in admin page fix
+
 = 2.0.2 =
 * No special blank treatment - it just works
 * Public WordPress.org release
