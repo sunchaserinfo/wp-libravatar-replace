@@ -33,7 +33,7 @@ PHP 5 is required, PHP 5.3 is strongly recommended
 
 == Changelog ==
 
-= 2.0.2
+= 2.0.2 =
 * No special blank treatment - it just works
 * Public WordPress.org release
 
@@ -41,13 +41,11 @@ PHP 5 is required, PHP 5.3 is strongly recommended
 * 'blank' Gravatar default fixed and reimplemented
 
 = 2.0.0 =
-(Differences from the Libravatar plugin)
 * Updated Services_Libravatar with SRV port discovery fix
 * The plugin tries to completely replace Gravatar with Libravatar
 * Beta support for BuddyPress
 
 = 1.0.4 =
-(never released)
 * Support for different fallbacks for the Libravatar
 
 = 1.0.3 =
