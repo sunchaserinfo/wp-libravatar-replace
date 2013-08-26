@@ -1,5 +1,5 @@
 === Libravatar Replace ===
-Contributors: SunChaser, GabSoftware
+Contributors: SunChaserInfo, GabSoftware
 Tags: libravatar, avatar, support, user, email, pseudo, picture, image, buddypress
 Requires at least: 3.6
 Tested up to: 3.6
