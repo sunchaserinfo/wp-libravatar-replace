@@ -60,6 +60,19 @@ class LibravatarReplace
 	}
 
 	/**
+	 * Update default avatar links so they will show defaults
+	 *
+	 * Can be removed when Libravatar will support forcedefault
+	 *
+	 * @param string $avatar_list
+	 * @return string
+	 */
+	function filterDefaultAvatarSelect($avatar_list)
+	{
+		return preg_replace('~/[a-f0-9]{32}~', '/'.str_repeat('0', 32), $avatar_list); // fill hash with zeros
+	}
+
+	/**
 	 * Create avatar link
 	 *
 	 * @param string $avatar
@@ -120,7 +133,7 @@ class LibravatarReplace
 		{
 			$options['d'] = $default;
 		}
-		$url = $libravatar->url($email, $options);
+		$url = $libravatar->getUrl($email, $options);
 
 		$avatar = "<img alt='{$safe_alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
 
@@ -174,5 +187,6 @@ $libravatar_replace = new LibravatarReplace();
 
 add_filter('get_avatar',                array($libravatar_replace, 'filterGetAvatar'), 10, 5);
 add_filter('avatar_defaults',           array($libravatar_replace, 'filterAvatarDefaults'));
+add_filter('default_avatar_select',     array($libravatar_replace, 'filterDefaultAvatarSelect'));
 add_filter('bp_core_gravatar_email',    array($libravatar_replace, 'filterBPCoreGravatarEmail'));
 add_filter('bp_gravatar_url',           array($libravatar_replace, 'filterBPGravatarUrl', 10));
