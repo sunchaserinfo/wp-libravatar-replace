@@ -1,15 +1,16 @@
 <?php
-/*
- Plugin Name: Libravatar Replace
- Plugin URI: http://code.sunchaser.info/libravatar
- Description: Libravatar support for WordPress and BuddyPress
- Version: 2.0.3
- Author: Christian Archer
- Author URI: https://sunchaser.info/
- License: ISC
- Initial Author: Gabriel Hautclocq
- Initial Author URI: http://www.gabsoftware.com/
-*/
+
+/**
+ * Plugin Name: Libravatar Replace
+ * Plugin URI: http://code.sunchaser.info/libravatar
+ * Description: Libravatar support for WordPress and BuddyPress
+ * Version: 2.0.3
+ * Author: Christian Archer
+ * Author URI: https://sunchaser.info/
+ * License: ISC
+ * Initial Author: Gabriel Hautclocq
+ * Initial Author URI: http://www.gabsoftware.com/
+ */
 
 // security check
 if (!defined('WP_PLUGIN_DIR'))

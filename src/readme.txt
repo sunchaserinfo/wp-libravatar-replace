@@ -1,7 +1,7 @@
 === Libravatar Replace ===
-Contributors: SunChaserInfo
+Contributors: sunchaserinfo
 Tags: libravatar, avatar, support, user, email, pseudo, picture, image, buddypress
-Requires at least: 3.6
+Requires at least: 2.7
 Tested up to: 3.6
 Stable tag: trunk
 
@@ -14,7 +14,7 @@ Adds <a href="http://www.libravatar.org">Libravatar</a> avatars support to your 
 </p>
 
 <p>
-<b>Warning!</b> The plugin is incompatible with it's predecessor, the Libravatar plugin. Please remove or disable it before installing this plugin.
+<b>Warning!</b> The plugin is incompatible with it's predecessor, the <b>Libravatar</b> plugin. Please remove or disable it before installing this plugin.
 </p>
 
 == Installation ==
@@ -25,7 +25,9 @@ Just extract the plugin directory into your wp-content/plugins directory.
 
 == Frequently Asked Questions ==
 = What are the requirements of this plugin? =
-PHP 5 is required, PHP 5.3 is strongly recommended
+PHP 5.2.4, WordPress 3.6.
+
+The plugin is tested down to WordPress 2.7 but I will not support anything but current and prevoius releases. The plugin will not work under WordPress 2.6 and earlier.
 
 == Thanks to ==
 * Gabriel Hautclocq, author of the initial plugin
