@@ -21,7 +21,7 @@ Adds <a href="http://www.libravatar.org">Libravatar</a> avatars support to your 
 
 <p>Just extract the plugin directory into your wp-content/plugins directory.</p>
 
-= via Composer ==
+= via Composer =
 
 (available since 2.0.3.1)
 
