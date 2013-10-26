@@ -1,0 +1,20 @@
+{
+	"name": "sunchaser/libravatar",
+	"description": "WordPress plugin that Adds Libravatar avatars support to your WordPress installation",
+	"license": ["ISC", "GPL2"],
+	"authors": [
+		{
+			"name": "Christian Archer",
+			"email": "chrstnarchr@aol.com"
+		}
+	],
+	"repositories": [
+		{
+			"type": "pear",
+			"url": "http://pear.php.net"
+		}
+	],
+	"require": {
+		"pear-pear.php.net/Services_Libravatar": "~0.2.3"
+	}
+}
