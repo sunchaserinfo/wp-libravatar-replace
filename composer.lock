@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9fd3c21defc4db706588b1d3e470c816",
+    "hash": "d4087252feafa55f9a5b41918d3ec52a",
     "packages": [
         {
             "name": "pear-pear.php.net/Services_Libravatar",

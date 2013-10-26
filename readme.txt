@@ -25,9 +25,11 @@ Just extract the plugin directory into your wp-content/plugins directory.
 
 == Installation via Composer ==
 
-If you are using Composer to manage your plugins, add PHP Pear and plugin's BitBucket repo (mercurial) and then
-require sunchaser/libravatar package. You should use composer/installers to ensure that the plugin will be
-installed to the correct path.
+(available since 2.0.3.1)
+
+If you are using Composer to manage your plugins, add PHP Pear repo (for Services_Libravatar) and
+plugin's BitBucket repo (mercurial) and then require sunchaser/libravatar package.
+You should use composer/installers to ensure that the plugin will be installed to the correct path.
 
     {
         "repositories": [
@@ -41,7 +43,7 @@ installed to the correct path.
             }
         ],
         "require": {
-            "sunchaser/libravatar": "dev-composer",
+            "sunchaser/libravatar": "dev-master",
             "composer/installers": "~1.0"
         }
     }
@@ -57,6 +59,11 @@ The plugin is tested down to WordPress 2.7 but I will not support anything but c
 * François Marier (For his hard work in the Libravatar project and his bug fixes)
 
 == Changelog ==
+
+= 2.0.3.1 =
+* Build for WordPress SVN via Composer
+* Allow installation via Composer
+* Since there are no changes to the plugin itself, it won't be committed to the WP plugin repo
 
 = 2.0.3 =
 * Default images in admin page fix
