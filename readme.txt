@@ -19,11 +19,9 @@ Adds <a href="http://www.libravatar.org">Libravatar</a> avatars support to your 
 
 == Installation ==
 
-<p>
-Just extract the plugin directory into your wp-content/plugins directory.
-</p>
+<p>Just extract the plugin directory into your wp-content/plugins directory.</p>
 
-== Installation via Composer ==
+= via Composer ==
 
 (available since 2.0.3.1)
 
