@@ -1,5 +1,8 @@
 syntax: regexp
 ^\.idea/.*
+^build/svn
+^vendor
 
 syntax: glob
 *.iml
+composer.phar

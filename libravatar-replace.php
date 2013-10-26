@@ -18,7 +18,10 @@ if (!defined('WP_PLUGIN_DIR'))
 	die('There is nothing to see here!');
 }
 
-require_once('Services_Libravatar.php');
+// we may encounter an autoload
+if (class_exists('Services_Libravatar') === false) {
+	require_once('Services_Libravatar.php');
+}
 
 /**
  * Class LibravatarReplace
