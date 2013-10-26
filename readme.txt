@@ -23,6 +23,29 @@ Adds <a href="http://www.libravatar.org">Libravatar</a> avatars support to your 
 Just extract the plugin directory into your wp-content/plugins directory.
 </p>
 
+== Installation via Composer ==
+
+If you are using Composer to manage your plugins, add PHP Pear and plugin's BitBucket repo (mercurial) and then
+require sunchaser/libravatar package. You should use composer/installers to ensure that the plugin will be
+installed to the correct path.
+
+    {
+        "repositories": [
+            {
+                    "type": "pear",
+                    "url": "http://pear.php.net"
+            },
+            {
+                    "type": "vcs",
+                    "url": "https://bitbucket.org/sunchaser/libravatar"
+            }
+        ],
+        "require": {
+            "sunchaser/libravatar": "dev-composer",
+            "composer/installers": "~1.0"
+        }
+    }
+
 == Frequently Asked Questions ==
 = What are the requirements of this plugin? =
 PHP 5.2.4, WordPress 3.6.
