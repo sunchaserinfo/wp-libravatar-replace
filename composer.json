@@ -1,7 +1,8 @@
 {
-	"name": "sunchaser/libravatar",
-	"description": "WordPress plugin that Adds Libravatar avatars support to your WordPress installation",
-	"license": ["ISC", "GPL2"],
+	"name": "sunchaser/wp-libravatar",
+	"description": "Libravatar Replace. A WordPress plugin that adds Libravatar avatars support to your WordPress installation",
+	"type": "wordpress-plugin",
+	"license": ["ISC", "GPL-2.0"],
 	"authors": [
 		{
 			"name": "Christian Archer",
