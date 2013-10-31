@@ -58,6 +58,10 @@ The plugin is tested down to WordPress 2.7 but I will not support anything but c
 
 == Changelog ==
 
+= 2.0.4 =
+* Some refactoring (move classes to the separate files)
+* Now we use vanilla Services_Libravatar, created compatibility class ServicesLibravatarExt
+
 = 2.0.3.1 =
 * Build for WordPress SVN via Composer
 * Allow installation via Composer
