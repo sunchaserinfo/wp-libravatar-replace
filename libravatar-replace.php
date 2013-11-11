@@ -20,7 +20,8 @@ if (!defined('WP_PLUGIN_DIR'))
 
 // if file exsists, require it. otherwise assume it's autoload
 // WARNING: do not check class existance instead of file or you will crash WordPress if both Libravatar and Libravatar Replace are active
-if (is_file(dirname(__FILE__) . '/classes/Services_Libravatar.class.php')) {
+if (is_file(dirname(__FILE__) . '/classes/Services_Libravatar.class.php'))
+{
 	require_once(dirname(__FILE__) . '/classes/Services_Libravatar.class.php');
 }
 
