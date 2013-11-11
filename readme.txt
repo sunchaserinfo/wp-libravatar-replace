@@ -35,10 +35,6 @@ You should use composer/installers to ensure that the plugin will be installed t
                     "type": "pear",
                     "url": "http://pear.php.net"
             },
-            {
-                    "type": "vcs",
-                    "url": "https://bitbucket.org/sunchaser/libravatar"
-            }
         ],
         "require": {
             "sunchaser/libravatar": "dev-master",
