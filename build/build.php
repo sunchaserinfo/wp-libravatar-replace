@@ -2,6 +2,27 @@
 
 <?php
 
+/**
+ * Build system for the Libravatar Replace WordPress plugin
+ * Copyright © 2013, Christian Archer <chrstnarchr@aol.com>
+ *
+ * Here's the dilemma:
+ * 1) It's a bad idea to store external libraries in your VCS
+ * 2) All files should be included into the WordPress Plugin SVN
+ *
+ * So let's make one small script that will build the proper structure
+ * for SVN while leaving the Services_Libravatar library out of our
+ * main repository on BitBucket
+ *
+ * The script uses Composer so minimum PHP version should be 5.3.2
+ * however the script is created only for author's purpose so
+ * it hadn't been tested only on PHP 5.5.0+. Sorry if your system
+ * is outdated :) And it's UNIX-only
+ *
+ * The plugin however should run on minimal requirements of
+ * the current version of WordPress (РHP 5.2.4+)
+ */
+
 $current_dir        = __DIR__;
 $base_dir           = dirname($current_dir);
 $svn_dir            = $current_dir . '/svn';
@@ -20,7 +41,7 @@ if (is_file('composer.phar')) {
 
 print_message('Installing dependencies');
 
-run_in_dir ($base_dir, 'php build/composer.phar install');
+run_in_dir($base_dir, 'php build/composer.phar install');
 
 /** @var \Composer\Autoload\ClassLoader $loader */
 $loader = require($base_dir . '/vendor/autoload.php');
