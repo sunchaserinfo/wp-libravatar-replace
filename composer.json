@@ -3,7 +3,7 @@
 	"description": "Libravatar Replace. A WordPress plugin that adds Libravatar avatars support to your WordPress installation",
 	"keywords": ["libravatar", "avatar", "wordpress", "buddypress"],
 	"type": "wordpress-plugin",
-	"license": ["ISC", "GPL-2.0+"],
+	"license": ["ISC"],
 	"authors": [
 		{
 			"name": "Christian Archer",
@@ -17,6 +17,6 @@
 		}
 	],
 	"require": {
-		"pear-pear.php.net/Services_Libravatar": "~0.2.3"
+		"pear-pear.php.net/Services_Libravatar": ">= 0.2.3"
 	}
 }
