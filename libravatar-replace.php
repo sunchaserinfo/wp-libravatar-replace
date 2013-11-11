@@ -7,7 +7,7 @@
  * Version: 2.0.4
  * Author: Christian Archer
  * Author URI: https://sunchaser.info/
- * License: ISC
+ * License: ISC, GNU GPL 2.0+
  * Initial Author: Gabriel Hautclocq
  * Initial Author URI: http://www.gabsoftware.com/
  */
