@@ -54,7 +54,7 @@ The plugin is tested down to WordPress 2.7 but I will not support anything but c
 
 == License Info ==
 
-Libravatar Replace is dual licensed under ISC license. It also uses
+Libravatar Replace is licensed under ISC license. It also uses
 some code under separate licenses
 
 = Libravatar Replace =
