@@ -25,17 +25,15 @@ Adds <a href="http://www.libravatar.org">Libravatar</a> avatars support to your 
 
 (available since 2.0.3.1)
 
-If you are using Composer to manage your plugins, add PHP Pear repo (for Services_Libravatar) and
-plugin's BitBucket repo (mercurial) and then require sunchaser/libravatar package.
+If you are using Composer to manage your plugins, add PHP Pear repo (for Services_Libravatar)
+and require sunchaser/libravatar package.
 You should use composer/installers to ensure that the plugin will be installed to the correct path.
 
     {
-        "repositories": [
-            {
-                    "type": "pear",
-                    "url": "http://pear.php.net"
-            }
-        ],
+        "repositories": [{
+            "type": "pear",
+            "url": "http://pear.php.net"
+        }],
         "require": {
             "sunchaser/libravatar": "dev-master",
             "composer/installers": "~1.0"
@@ -46,7 +44,8 @@ You should use composer/installers to ensure that the plugin will be installed t
 = What are the requirements of this plugin? =
 PHP 5.2.4, WordPress 3.6.
 
-The plugin is tested down to WordPress 2.7 but I will not support anything but current and prevoius releases. The plugin will not work under WordPress 2.6 and earlier.
+The plugin is tested down to WordPress 2.7 but I will not support anything but current and prevoius releases.
+The plugin will not work under WordPress 2.6 and earlier.
 
 == Thanks to ==
 * Gabriel Hautclocq, author of the initial plugin
