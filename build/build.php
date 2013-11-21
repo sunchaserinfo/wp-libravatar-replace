@@ -98,7 +98,7 @@ run_in_dir($base_dir, "cp -v classes/* $svn_classes_dir");
 
 $services_libravatar = $loader->findFile('Services_Libravatar');
 
-run_in_dir($base_dir, "cp -v $services_libravatar $svn_classes_dir/Services_Libravatar.class.php");
+run_in_dir($base_dir, "cp -v $services_libravatar $svn_classes_dir/ServicesLibravatar.class.php");
 
 print_message('If nothing failed, the package for WordPress Plugins SVN is ready');
 
