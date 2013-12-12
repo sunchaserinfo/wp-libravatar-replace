@@ -7,12 +7,12 @@
  */
 class LibravatarReplace
 {
-	var $bp_catched_last_email;
+	private $bp_catched_last_email;
 
 	/**
 	 * @return bool true if the connection uses SSL
 	 */
-	function isSsl()
+	private function isSsl()
 	{
 		if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off')
 		{
@@ -34,7 +34,7 @@ class LibravatarReplace
 	 * @param array $avatar_defaults
 	 * @return mixed
 	 */
-	function filterAvatarDefaults($avatar_defaults)
+	public function filterAvatarDefaults($avatar_defaults)
 	{
 		$avatar_defaults['gravatar_default'] = __('Libravatar Logo'); // rename accordingly
 		return $avatar_defaults;
@@ -48,7 +48,7 @@ class LibravatarReplace
 	 * @param string $avatar_list
 	 * @return string
 	 */
-	function filterDefaultAvatarSelect($avatar_list)
+	public function filterDefaultAvatarSelect($avatar_list)
 	{
 		return preg_replace('~/[a-f0-9]{32}~', '/'.str_repeat('0', 32), $avatar_list); // fill hash with zeros
 	}
@@ -63,7 +63,7 @@ class LibravatarReplace
 	 * @param string $alt
 	 * @return string avatar HTML
 	 */
-	function filterGetAvatar($avatar, $id_or_email, $size, $default, $alt)
+	public function filterGetAvatar($avatar, $id_or_email, $size, $default, $alt)
 	{
 		if (false === $alt)
 		{
@@ -127,7 +127,7 @@ class LibravatarReplace
 	 * @param $email
 	 * @return mixed
 	 */
-	function filterBPCoreGravatarEmail($email)
+	public function filterBPCoreGravatarEmail($email)
 	{
 		$this->bp_catched_last_email = $email;
 
@@ -143,7 +143,7 @@ class LibravatarReplace
 	 * @param $host
 	 * @return string
 	 */
-	function filterBPGravatarUrl($host)
+	public function filterBPGravatarUrl($host)
 	{
 		$default_host = $this->isSsl() ? 'https://seccdn.libravatar.org/avatar/' : 'http://cdn.libravatar.org/avatar/';
 

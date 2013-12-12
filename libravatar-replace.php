@@ -26,6 +26,7 @@ if (is_file(dirname(__FILE__) . '/classes/ServicesLibravatar.class.php'))
 }
 
 require_once dirname(__FILE__) . '/classes/ServicesLibravatarExt.class.php'; // Services_Libravatar custom extensions
+require_once dirname(__FILE__) . '/classes/ServicesLibravatarCached.class.php'; // Services_Libravatar local caching extension
 require_once dirname(__FILE__) . '/classes/LibravatarReplace.class.php'; // main plugin class
 
 $libravatar_replace = new LibravatarReplace();
