@@ -168,6 +168,9 @@ The build system uses Composer to make the plugin a complete thing
 
 == Changelog ==
 
+= 3.0.0 =
+* Optional local cache (doesn't work for BuddyPress)
+
 = 2.0.4.1 =
 * Add a readme inside the build system
 * Add a section for license data
@@ -206,3 +209,6 @@ The build system uses Composer to make the plugin a complete thing
 
 = 2.0.0 =
 * Thank you for using the Libravatar Replace plugin!
+
+= 3.0.0 =
+* We have added an optional local cache for the avatars

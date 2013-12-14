@@ -7,7 +7,16 @@
  */
 class LibravatarReplace
 {
+	private $plugin_file;
 	private $bp_catched_last_email;
+
+	const OPTION_LOCAL_CACHE_ENABLED = 'libravatar_replace_cache_enabled';
+	const OPTION_LOCAL_CACHE_ENABLED_DEFAULT = 0;
+
+	public function __construct($plugin_file)
+	{
+		$this->plugin_file = $plugin_file;
+	}
 
 	/**
 	 * @return bool true if the connection uses SSL
@@ -105,14 +114,20 @@ class LibravatarReplace
 			$email = $id_or_email;
 		}
 
-		$libravatar = new ServicesLibravatarExt();
+		if (get_option(self::OPTION_LOCAL_CACHE_ENABLED, self::OPTION_LOCAL_CACHE_ENABLED_DEFAULT)) {
+			$libravatar = new ServicesLibravatarCached($this->plugin_file);
+		} else {
+			$libravatar = new ServicesLibravatarExt();
+		}
+
 		$options = array();
-		$options['s'] = $size;
+		$options['size'] = $size;
 		$options['algorithm'] = 'md5';
 		$options['https'] = $this->isSsl();
+
 		if ($default && $default !== 'gravatar_default')
 		{
-			$options['d'] = $default;
+			$options['default'] = $default;
 		}
 		$url = $libravatar->getUrl($email, $options);
 

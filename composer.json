@@ -4,18 +4,14 @@
 	"keywords": ["libravatar", "avatar", "wordpress", "buddypress"],
 	"type": "wordpress-plugin",
 	"license": ["ISC"],
-	"authors": [
-		{
-			"name": "Christian Archer",
-			"email": "chrstnarchr@aol.com"
-		}
-	],
-	"repositories": [
-		{
-			"type": "pear",
-			"url": "http://pear.php.net"
-		}
-	],
+	"authors": [{
+		"name": "Christian Archer",
+		"email": "chrstnarchr@aol.com"
+	}],
+	"repositories": [{
+		"type": "pear",
+		"url": "http://pear.php.net"
+	}],
 	"require": {
 		"pear-pear.php.net/Services_Libravatar": ">= 0.2.3"
 	}

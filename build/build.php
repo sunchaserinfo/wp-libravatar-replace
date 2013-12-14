@@ -41,6 +41,7 @@ $svn_dir            = $current_dir . '/svn';
 $svn_assets_dir     = $svn_dir . '/assets';
 $svn_trunk_dir      = $svn_dir . '/trunk';
 $svn_classes_dir    = $svn_trunk_dir . '/classes';
+$svn_cache_dir      = $svn_trunk_dir . '/cache';
 
 //install composer
 if (is_file('composer.phar')) {
@@ -85,6 +86,13 @@ if (is_dir($svn_classes_dir) === false)
 	run_in_dir($svn_classes_dir, 'rm -vf *'); // remove all __files__ in the directory
 }
 
+if (is_dir($svn_cache_dir) === false)
+{
+	mkdir($svn_cache_dir);
+} else {
+	run_in_dir($svn_cache_dir, 'rm -vf *'); // remove all __files__ in the directory
+}
+
 print_message('Updating assets');
 
 run_in_dir($base_dir, "cp -v assets/* $svn_assets_dir");
@@ -95,6 +103,7 @@ run_in_dir($base_dir, "cp -v libravatar-replace.php $svn_trunk_dir");
 run_in_dir($base_dir, "cp -v readme.txt $svn_trunk_dir");
 
 run_in_dir($base_dir, "cp -v classes/* $svn_classes_dir");
+run_in_dir($base_dir, "cp -v cache/* $svn_cache_dir");
 
 $services_libravatar = $loader->findFile('Services_Libravatar');
 
