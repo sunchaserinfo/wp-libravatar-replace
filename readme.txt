@@ -2,7 +2,7 @@
 Contributors: sunchaserinfo
 Tags: libravatar, avatar, support, user, email, pseudo, picture, image, buddypress
 Requires at least: 2.7
-Tested up to: 3.8
+Tested up to: 3.9
 Stable tag: trunk
 
 Replaces Gravatar with Libravatar in your WordPress installation.
@@ -37,7 +37,7 @@ You should use composer/installers to ensure that the plugin will be installed t
 
 == Frequently Asked Questions ==
 = What are the requirements of this plugin? =
-PHP 5.2.4, WordPress 3.6.
+PHP 5.2.4, WordPress 3.8.
 
 The plugin is tested down to WordPress 2.7 but I will not support anything but current and prevoius releases.
 The plugin will not work under WordPress 2.6 and earlier.
