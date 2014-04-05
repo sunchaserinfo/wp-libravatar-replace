@@ -1,8 +1,3 @@
-<?php
-/**
- * @var LibravatarReplace $this
- */
-?>
 <div class="wrap">
 	<h2>Libravatar Replace Settings</h2>
 

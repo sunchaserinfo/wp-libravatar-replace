@@ -7,11 +7,23 @@ class ServicesLibravatarCached extends ServicesLibravatarExt
 
 	const DEFAULT_SIZE = 80; // gravatar and libravatar const
 
+	/**
+	 * Plugin file is required to find the cache directory
+	 *
+	 * @param $plugin_file
+	 */
 	public function __construct($plugin_file)
 	{
 		$this->plugin_file = $plugin_file;
 	}
 
+	/**
+	 * Download image instead of showing it, then show from local cache
+	 *
+	 * @param string $identifier
+	 * @param array $options
+	 * @return string
+	 */
 	public function getUrl($identifier, $options = array())
 	{
 		$identifier = $this->normalizeIdentifier($identifier);
@@ -39,6 +51,8 @@ class ServicesLibravatarCached extends ServicesLibravatarExt
 			{
 				unlink($file_path);
 			}
+
+			$options['https'] = false; // no need for s2s connections
 
 			$url = parent::getUrl($identifier, $options);
 

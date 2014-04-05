@@ -22,7 +22,7 @@ class LibravatarReplace
 
 	public function init()
 	{
-		load_plugin_textdomain(self::MODULE_NAME, false, dirname(plugin_basename($this->plugin_file)));
+		load_plugin_textdomain('libravatar-replace', false, dirname(plugin_basename($this->plugin_file)));
 	}
 
 	/**
@@ -158,10 +158,9 @@ class LibravatarReplace
 	 * Take the remembered email and get url from it, then extract the host
 	 * Unfortunately there's no way to set Libravatar link with federation support more direct
 	 *
-	 * @param $host
 	 * @return string
 	 */
-	public function filterBPGravatarUrl($host)
+	public function filterBPGravatarUrl()
 	{
 		$default_host = $this->isSsl() ? 'https://seccdn.libravatar.org/avatar/' : 'http://cdn.libravatar.org/avatar/';
 
@@ -181,9 +180,14 @@ class LibravatarReplace
 		return isset($matches[1]) ? $matches[1] : $default_host;
 	}
 
+	/**
+	 * A factory for the avatar retriever class
+	 *
+	 * @return Services_Libravatar
+	 */
 	private function getLibravatarClass()
 	{
-		if (get_option(self::OPTION_LOCAL_CACHE_ENABLED, self::OPTION_LOCAL_CACHE_ENABLED_DEFAULT))
+		if ($this->isLocalCacheEnabled())
 		{
 			return new ServicesLibravatarCached($this->plugin_file);
 		}
@@ -193,6 +197,9 @@ class LibravatarReplace
 		}
 	}
 
+	/**
+	 * Let's put our admin page to the menu
+	 */
 	public function registerAdminMenu()
 	{
 		add_submenu_page(
@@ -205,13 +212,29 @@ class LibravatarReplace
 		);
 	}
 
+	/**
+	 * Tell the admin page what settings are safe to be set
+	 */
 	public function registerSettings()
 	{
 		register_setting(self::MODULE_NAME, self::OPTION_LOCAL_CACHE_ENABLED);
 	}
 
+	/**
+	 * Render the admin page
+	 */
 	public function adminPage()
 	{
 		include dirname(__FILE__) .'/../views/admin.php';
+	}
+
+	/**
+	 * Get local cache enabled option
+	 *
+	 * @return bool
+	 */
+	private function isLocalCacheEnabled()
+	{
+		return get_option(self::OPTION_LOCAL_CACHE_ENABLED, self::OPTION_LOCAL_CACHE_ENABLED_DEFAULT) ? true : false;
 	}
 }

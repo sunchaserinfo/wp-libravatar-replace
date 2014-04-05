@@ -29,16 +29,14 @@ require_once dirname(__FILE__) . '/classes/ServicesLibravatarExt.class.php'; // 
 require_once dirname(__FILE__) . '/classes/ServicesLibravatarCached.class.php'; // Services_Libravatar local caching extension
 require_once dirname(__FILE__) . '/classes/LibravatarReplace.class.php'; // main plugin class
 
-load_plugin_textdomain('libravatar-replace', false, basename(dirname(__FILE__)) . '/languages');
-
 $libravatarReplace = new LibravatarReplace(__FILE__);
 
-add_filter('init',                      array($libravatarReplace, 'init'));
+add_action('init',                      array($libravatarReplace, 'init'));
+add_action('admin_menu',                array($libravatarReplace, 'registerAdminMenu'), 0);
+add_action('admin_init',                array($libravatarReplace, 'registerSettings'));
+
 add_filter('get_avatar',                array($libravatarReplace, 'filterGetAvatar'), 10, 5);
 add_filter('avatar_defaults',           array($libravatarReplace, 'filterAvatarDefaults'));
 add_filter('default_avatar_select',     array($libravatarReplace, 'filterDefaultAvatarSelect'));
 add_filter('bp_core_gravatar_email',    array($libravatarReplace, 'filterBPCoreGravatarEmail'));
 add_filter('bp_gravatar_url',           array($libravatarReplace, 'filterBPGravatarUrl', 10));
-
-add_action('admin_menu',                array($libravatarReplace, 'registerAdminMenu'), 0);
-add_action('admin_init',                array($libravatarReplace, 'registerSettings'));
