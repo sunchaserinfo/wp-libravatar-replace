@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Libravatar Replace 3.0.0\n"
+"POT-Creation-Date: 2014-04-05 23:16+0300\n"
+"PO-Revision-Date: 2014-04-05 23:17+0300\n"
+"Last-Translator: Christian Archer <chrstnarchr@aol.com>\n"
+"Language-Team: Christian Archer <chstnarchr@aol.com>\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: classes\n"
+"X-Poedit-SearchPath-1: views\n"
+
+#: classes/LibravatarReplace.class.php:55
+msgid "Libravatar Logo"
+msgstr ""
+
+#: views/admin.php:10
+msgid "You may set the default avatar on the"
+msgstr ""
+
+#: views/admin.php:11
+msgid "Discussion Settings page"
+msgstr ""
+
+#: views/admin.php:20
+msgid "Use local cache for images"
+msgstr ""
+
+#: views/admin.php:20
+msgid "(experimental)"
+msgstr ""
+
+#: views/admin.php:24
+msgid "Save Changes"
+msgstr ""

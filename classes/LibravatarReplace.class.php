@@ -7,12 +7,28 @@
  */
 class LibravatarReplace
 {
-	var $bp_catched_last_email;
+	private $plugin_file;
+	private $bp_catched_last_email;
+
+	const MODULE_NAME = 'libravatar-replace';
+
+	const OPTION_LOCAL_CACHE_ENABLED = 'libravatar_replace_cache_enabled';
+	const OPTION_LOCAL_CACHE_ENABLED_DEFAULT = 0;
+
+	public function __construct($plugin_file)
+	{
+		$this->plugin_file = $plugin_file;
+	}
+
+	public function init()
+	{
+		load_plugin_textdomain(self::MODULE_NAME, false, dirname(plugin_basename($this->plugin_file)));
+	}
 
 	/**
 	 * @return bool true if the connection uses SSL
 	 */
-	function isSsl()
+	private function isSsl()
 	{
 		if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off')
 		{
@@ -34,9 +50,9 @@ class LibravatarReplace
 	 * @param array $avatar_defaults
 	 * @return mixed
 	 */
-	function filterAvatarDefaults($avatar_defaults)
+	public function filterAvatarDefaults($avatar_defaults)
 	{
-		$avatar_defaults['gravatar_default'] = __('Libravatar Logo'); // rename accordingly
+		$avatar_defaults['gravatar_default'] = __('Libravatar Logo', 'libravatar-replace'); // rename accordingly
 		return $avatar_defaults;
 	}
 
@@ -48,7 +64,7 @@ class LibravatarReplace
 	 * @param string $avatar_list
 	 * @return string
 	 */
-	function filterDefaultAvatarSelect($avatar_list)
+	public function filterDefaultAvatarSelect($avatar_list)
 	{
 		return preg_replace('~/[a-f0-9]{32}~', '/'.str_repeat('0', 32), $avatar_list); // fill hash with zeros
 	}
@@ -63,7 +79,7 @@ class LibravatarReplace
 	 * @param string $alt
 	 * @return string avatar HTML
 	 */
-	function filterGetAvatar($avatar, $id_or_email, $size, $default, $alt)
+	public function filterGetAvatar($avatar, $id_or_email, $size, $default, $alt)
 	{
 		if (false === $alt)
 		{
@@ -105,14 +121,16 @@ class LibravatarReplace
 			$email = $id_or_email;
 		}
 
-		$libravatar = new ServicesLibravatarExt();
+		$libravatar = $this->getLibravatarClass();
+
 		$options = array();
-		$options['s'] = $size;
+		$options['size'] = $size;
 		$options['algorithm'] = 'md5';
 		$options['https'] = $this->isSsl();
+
 		if ($default && $default !== 'gravatar_default')
 		{
-			$options['d'] = $default;
+			$options['default'] = $default;
 		}
 		$url = $libravatar->getUrl($email, $options);
 
@@ -127,7 +145,7 @@ class LibravatarReplace
 	 * @param $email
 	 * @return mixed
 	 */
-	function filterBPCoreGravatarEmail($email)
+	public function filterBPCoreGravatarEmail($email)
 	{
 		$this->bp_catched_last_email = $email;
 
@@ -143,7 +161,7 @@ class LibravatarReplace
 	 * @param $host
 	 * @return string
 	 */
-	function filterBPGravatarUrl($host)
+	public function filterBPGravatarUrl($host)
 	{
 		$default_host = $this->isSsl() ? 'https://seccdn.libravatar.org/avatar/' : 'http://cdn.libravatar.org/avatar/';
 
@@ -152,7 +170,7 @@ class LibravatarReplace
 			return $default_host;
 		}
 
-		$libravatar = new ServicesLibravatarExt();
+		$libravatar = $this->getLibravatarClass();
 		$options = array();
 		$options['algorithm'] = 'md5';
 		$options['https'] = $this->isSsl();
@@ -161,5 +179,39 @@ class LibravatarReplace
 		preg_match('~^(.*/avatar/)~', $url, $matches);
 
 		return isset($matches[1]) ? $matches[1] : $default_host;
+	}
+
+	private function getLibravatarClass()
+	{
+		if (get_option(self::OPTION_LOCAL_CACHE_ENABLED, self::OPTION_LOCAL_CACHE_ENABLED_DEFAULT))
+		{
+			return new ServicesLibravatarCached($this->plugin_file);
+		}
+		else
+		{
+			return new ServicesLibravatarExt();
+		}
+	}
+
+	public function registerAdminMenu()
+	{
+		add_submenu_page(
+			'options-general.php',
+			'Libravatar Replace Settings',
+			'Libravatar',
+			'administrator',
+			self::MODULE_NAME,
+			array($this, 'adminPage')
+		);
+	}
+
+	public function registerSettings()
+	{
+		register_setting(self::MODULE_NAME, self::OPTION_LOCAL_CACHE_ENABLED);
+	}
+
+	public function adminPage()
+	{
+		include dirname(__FILE__) .'/../views/admin.php';
 	}
 }

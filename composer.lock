@@ -3,33 +3,43 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5dbb7b134b5e2fab59bdf7efc570cf5d",
+    "hash": "0288f3a9becd575dc28a274abc6b965c",
     "packages": [
         {
-            "name": "pear-pear.php.net/Services_Libravatar",
+            "name": "sunchaser/services-libravatar",
             "version": "0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunchaserinfo/services_libravatar.git",
+                "reference": "4b02fe4bf34264068e7ce1cfa76528c8252ee6a4"
+            },
             "dist": {
-                "type": "file",
-                "url": "http://pear.php.net/get/Services_Libravatar-0.2.3.tgz",
-                "reference": null,
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunchaserinfo/services_libravatar/zipball/4b02fe4bf34264068e7ce1cfa76528c8252ee6a4",
+                "reference": "4b02fe4bf34264068e7ce1cfa76528c8252ee6a4",
+                "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0.0"
+                "php": ">= 5.3"
             },
-            "replace": {
-                "pear-pear/services_libravatar": "== 0.2.3.0"
-            },
-            "type": "pear-library",
+            "type": "library",
             "autoload": {
-                "classmap": [
-                    ""
-                ]
+                "psr-0": {
+                    "Services_": "/"
+                }
             },
-            "include-path": [
-                "/"
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
             ],
-            "description": "Allows php applications to implement libravatar.org"
+            "authors": [
+                {
+                    "name": "Melissa Draper",
+                    "email": "melissa@meldraweb.com"
+                }
+            ],
+            "description": "PHP support for the Libravatar.org service",
+            "time": "2014-04-05 16:10:25"
         }
     ],
     "packages-dev": [

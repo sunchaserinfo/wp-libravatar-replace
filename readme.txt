@@ -25,15 +25,10 @@ Adds <a href="http://www.libravatar.org">Libravatar</a> avatars support to your 
 
 (available since 2.0.3.1)
 
-If you are using Composer to manage your plugins, add PHP Pear repo (for Services_Libravatar)
-and require sunchaser/libravatar package.
+If you are using Composer to manage your plugins, require sunchaser/libravatar package.
 You should use composer/installers to ensure that the plugin will be installed to the correct path.
 
     {
-        "repositories": [{
-            "type": "pear",
-            "url": "http://pear.php.net"
-        }],
         "require": {
             "sunchaser/libravatar": "dev-master",
             "composer/installers": "~1.0"
@@ -168,6 +163,11 @@ The build system uses Composer to make the plugin a complete thing
 
 == Changelog ==
 
+= 3.0.0 =
+* Optional local cache (experimental)
+* Options page
+* Translations
+
 = 2.0.4.1 =
 * Add a readme inside the build system
 * Add a section for license data
@@ -206,3 +206,6 @@ The build system uses Composer to make the plugin a complete thing
 
 = 2.0.0 =
 * Thank you for using the Libravatar Replace plugin!
+
+= 3.0.0 =
+* An optional local cache for the avatars is added
