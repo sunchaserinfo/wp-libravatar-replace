@@ -6,3 +6,4 @@ syntax: regexp
 syntax: glob
 *.iml
 composer.phar
+*.mo

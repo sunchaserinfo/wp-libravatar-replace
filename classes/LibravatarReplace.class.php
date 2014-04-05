@@ -10,12 +10,19 @@ class LibravatarReplace
 	private $plugin_file;
 	private $bp_catched_last_email;
 
+	const MODULE_NAME = 'libravatar-replace';
+
 	const OPTION_LOCAL_CACHE_ENABLED = 'libravatar_replace_cache_enabled';
 	const OPTION_LOCAL_CACHE_ENABLED_DEFAULT = 0;
 
 	public function __construct($plugin_file)
 	{
 		$this->plugin_file = $plugin_file;
+	}
+
+	public function init()
+	{
+		load_plugin_textdomain(self::MODULE_NAME, false, dirname(plugin_basename($this->plugin_file)));
 	}
 
 	/**
@@ -45,7 +52,7 @@ class LibravatarReplace
 	 */
 	public function filterAvatarDefaults($avatar_defaults)
 	{
-		$avatar_defaults['gravatar_default'] = __('Libravatar Logo'); // rename accordingly
+		$avatar_defaults['gravatar_default'] = __('Libravatar Logo', 'libravatar-replace'); // rename accordingly
 		return $avatar_defaults;
 	}
 
@@ -114,11 +121,7 @@ class LibravatarReplace
 			$email = $id_or_email;
 		}
 
-		if (get_option(self::OPTION_LOCAL_CACHE_ENABLED, self::OPTION_LOCAL_CACHE_ENABLED_DEFAULT)) {
-			$libravatar = new ServicesLibravatarCached($this->plugin_file);
-		} else {
-			$libravatar = new ServicesLibravatarExt();
-		}
+		$libravatar = $this->getLibravatarClass();
 
 		$options = array();
 		$options['size'] = $size;
@@ -167,7 +170,7 @@ class LibravatarReplace
 			return $default_host;
 		}
 
-		$libravatar = new ServicesLibravatarExt();
+		$libravatar = $this->getLibravatarClass();
 		$options = array();
 		$options['algorithm'] = 'md5';
 		$options['https'] = $this->isSsl();
@@ -176,5 +179,39 @@ class LibravatarReplace
 		preg_match('~^(.*/avatar/)~', $url, $matches);
 
 		return isset($matches[1]) ? $matches[1] : $default_host;
+	}
+
+	private function getLibravatarClass()
+	{
+		if (get_option(self::OPTION_LOCAL_CACHE_ENABLED, self::OPTION_LOCAL_CACHE_ENABLED_DEFAULT))
+		{
+			return new ServicesLibravatarCached($this->plugin_file);
+		}
+		else
+		{
+			return new ServicesLibravatarExt();
+		}
+	}
+
+	public function registerAdminMenu()
+	{
+		add_submenu_page(
+			'options-general.php',
+			'Libravatar Replace Settings',
+			'Libravatar',
+			'administrator',
+			self::MODULE_NAME,
+			array($this, 'adminPage')
+		);
+	}
+
+	public function registerSettings()
+	{
+		register_setting(self::MODULE_NAME, self::OPTION_LOCAL_CACHE_ENABLED);
+	}
+
+	public function adminPage()
+	{
+		include dirname(__FILE__) .'/../views/admin.php';
 	}
 }
