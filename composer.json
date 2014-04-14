@@ -9,6 +9,7 @@
 		"email": "chrstnarchr@aol.com"
 	}],
 	"require": {
+		"composer/installers": "~1.0",
 		"sunchaser/services-libravatar": ">= 0.2.3"
 	},
 	"conflict": {

@@ -3,30 +3,118 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "0288f3a9becd575dc28a274abc6b965c",
+    "hash": "f7781e651c97a3227e0c0bd6956500c2",
     "packages": [
         {
-            "name": "sunchaser/services-libravatar",
-            "version": "0.2.3",
+            "name": "composer/installers",
+            "version": "v1.0.13",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sunchaserinfo/services_libravatar.git",
-                "reference": "4b02fe4bf34264068e7ce1cfa76528c8252ee6a4"
+                "url": "https://github.com/composer/installers.git",
+                "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sunchaserinfo/services_libravatar/zipball/4b02fe4bf34264068e7ce1cfa76528c8252ee6a4",
-                "reference": "4b02fe4bf34264068e7ce1cfa76528c8252ee6a4",
+                "url": "https://api.github.com/repos/composer/installers/zipball/26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
+                "reference": "26d37e307f9aa6e2e81806a6525666f8ab5ba0ff",
+                "shasum": ""
+            },
+            "replace": {
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "Composer\\Installers\\Installer",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Composer\\Installers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "http://composer.github.com/installers/",
+            "keywords": [
+                "Craft",
+                "Hurad",
+                "MODX Evo",
+                "OXID",
+                "WolfCMS",
+                "agl",
+                "annotatecms",
+                "cakephp",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "drupal",
+                "elgg",
+                "fuelphp",
+                "installer",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "shopware",
+                "silverstripe",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "zend",
+                "zikula"
+            ],
+            "time": "2014-04-09 16:12:43"
+        },
+        {
+            "name": "sunchaser/services-libravatar",
+            "version": "0.2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sunchaserinfo/services_libravatar.git",
+                "reference": "baadbb0d6f70916a29e3679d33b74e9ea5f2eaae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sunchaserinfo/services_libravatar/zipball/baadbb0d6f70916a29e3679d33b74e9ea5f2eaae",
+                "reference": "baadbb0d6f70916a29e3679d33b74e9ea5f2eaae",
                 "shasum": ""
             },
             "require": {
                 "php": ">= 5.3"
             },
+            "replace": {
+                "pear-pear.php.net/services_libravatar": "0.2.3",
+                "pear-pear/services_libravatar": "0.2.3"
+            },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Services_": "/"
-                }
+                "classmap": [
+                    "Services"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -39,7 +127,11 @@
                 }
             ],
             "description": "PHP support for the Libravatar.org service",
-            "time": "2014-04-05 16:10:25"
+            "keywords": [
+                "avatar",
+                "libravatar"
+            ],
+            "time": "2014-04-14 21:24:08"
         }
     ],
     "packages-dev": [
