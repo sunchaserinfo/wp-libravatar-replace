@@ -10,5 +10,8 @@
 	}],
 	"require": {
 		"sunchaser/services-libravatar": ">= 0.2.3"
+	},
+	"conflict": {
+		"wpackagist-plugin/libravatar": "*"
 	}
 }
