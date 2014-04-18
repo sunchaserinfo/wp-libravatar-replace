@@ -91,7 +91,7 @@
         },
         {
             "name": "sunchaser/services-libravatar",
-            "version": "0.2.3.1",
+            "version": "0.2.3-patch1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sunchaserinfo/services_libravatar.git",
