@@ -12,7 +12,7 @@
 		"sunchaser/services-libravatar": ">= 0.2.3"
 	},
 	"require-dev": {
-		"sunchaser/wp2md": "dev-master"
+		"sunchaser/wp2md": ">= 1.0.0"
 	},
 	"conflict": {
 		"wpackagist-plugin/libravatar": "*",

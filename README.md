@@ -4,22 +4,21 @@
 **Requires at least:** 2.7  
 **Tested up to:** 3.9  
 **Stable tag:** trunk  
+**License:** ISC  
 
 Replaces Gravatar with Libravatar in your WordPress installation.
 
 ## Description ##
 
-<p>
-Adds <a href="http://www.libravatar.org">Libravatar</a> avatars support to your WordPress installation. Libravatar is an alternative to Gravatar and its API is mostly compatible.
-</p>
+Adds [Libravatar](http://www.libravatar.org/) avatars support to your WordPress installation.
+Libravatar is an alternative to Gravatar and its API is mostly compatible.
 
-<p>
-<b>Warning!</b> The plugin is incompatible with it's predecessor, the <b>Libravatar</b> plugin. Please remove or disable it before installing this plugin.
-</p>
+**Warning!** The plugin is incompatible with it's predecessor, the
+**[Libravatar](https://wordpress.org/plugins/libravatar/)** plugin. Please remove or disable it before installing this plugin.
 
 ## Installation ##
 
-<p>Just extract the plugin directory into your wp-content/plugins directory.</p>
+Just extract the plugin directory into your *wp-content/plugins* directory.
 
 ### via Composer ###
 
