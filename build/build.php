@@ -79,6 +79,8 @@ print_message('Updating files');
 
 run_in_dir($base_dir, "cp -v libravatar-replace.php $svn_trunk_dir");
 run_in_dir($base_dir, "cp -v readme.txt $svn_trunk_dir");
+run_in_dir($base_dir, "cp -v LICENSE $svn_trunk_dir");
+run_in_dir($base_dir, "cp -v README.md $svn_trunk_dir");
 
 run_in_dir($base_dir, "cp -v classes/* $svn_classes_dir");
 run_in_dir($base_dir, "cp -v cache/* $svn_cache_dir");
