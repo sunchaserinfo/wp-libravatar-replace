@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Class ServicesLibravatarExt
+ *
+ * @author Christian Archer <chrstnarchr@aol.com>
+ * @copyright © 2013, Christian Archer
+ * @license ISC
+ */
 class ServicesLibravatarExt extends Services_Libravatar
 {
 	/**

@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Class ServicesLibravatarCached
+ *
+ * @author Christian Archer <chrstnarchr@aol.com>
+ * @copyright © 2013, Christian Archer
+ * @license ISC
+ */
 class ServicesLibravatarCached extends ServicesLibravatarExt
 {
 	private $cache_time = 259200; // 60*60*24*3 seconds = 3 days

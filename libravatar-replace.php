@@ -8,8 +8,6 @@
  * Author: Christian Archer
  * Author URI: https://sunchaser.info/
  * License: ISC
- * Initial Author: Gabriel Hautclocq
- * Initial Author URI: http://www.gabsoftware.com/
  */
 
 // security check

@@ -4,6 +4,12 @@
  * Class LibravatarReplace
  *
  * everything for the plugin to work
+ *
+ * @author Gabriel Hautclocq
+ * @author Christian Archer <chrstnarchr@aol.com>
+ * @copyright © 2011, Gabriel Hautclocq
+ * @copyright © 2013, Christian Archer
+ * @license ISC
  */
 class LibravatarReplace
 {
