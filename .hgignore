@@ -1,6 +1,5 @@
 syntax: regexp
 ^\.idea/.*
-^build/svn
 ^vendor
 ^classes/Services_Libravatar.php
 ^classes/ServicesLibravatar.class.php
