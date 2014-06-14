@@ -12,7 +12,8 @@
 		"sunchaser/services-libravatar": ">= 0.2.3"
 	},
 	"require-dev": {
-		"sunchaser/wp2md": ">= 1.0.0"
+		"wpreadme2markdown/wpreadme2markdown": ">= 1.0.0",
+		"indeyets/pake": "~1.99"
 	},
 	"conflict": {
 		"wpackagist-plugin/libravatar": "*",

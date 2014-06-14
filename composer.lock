@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "5922c0c4e56957a738cc7212b10b412a",
+    "hash": "540bb036e6a0f6633a851b28aca610d1",
     "packages": [
         {
             "name": "sunchaser/services-libravatar",
@@ -52,31 +53,43 @@
     ],
     "packages-dev": [
         {
-            "name": "sunchaser/wp2md",
-            "version": "1.0.0",
+            "name": "indeyets/pake",
+            "version": "1.99.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sunchaserinfo/wp2md.git",
-                "reference": "ea6d1d687c746c789dc490c73be1975e21794f02"
+                "url": "https://github.com/indeyets/pake.git",
+                "reference": "410d0d5c18bb3438d323570fdb502402aa7a1aba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sunchaserinfo/wp2md/zipball/ea6d1d687c746c789dc490c73be1975e21794f02",
-                "reference": "ea6d1d687c746c789dc490c73be1975e21794f02",
+                "url": "https://api.github.com/repos/indeyets/pake/zipball/410d0d5c18bb3438d323570fdb502402aa7a1aba",
+                "reference": "410d0d5c18bb3438d323570fdb502402aa7a1aba",
                 "shasum": ""
             },
             "require": {
-                "php": ">= 5.3.3",
-                "symfony/console": "~2.4.4"
+                "ext-mbstring": "*",
+                "php": ">=5.2.1"
+            },
+            "require-dev": {
+                "simpletest/simpletest": "1.1.*"
+            },
+            "suggest": {
+                "ext-bz2": "*",
+                "ext-pcntl": "*",
+                "ext-phar": "*",
+                "ext-posix": "*",
+                "ext-zlib": "*",
+                "phing/phing": "2.4.*",
+                "simpletest/simpletest": "1.1.*"
             },
             "bin": [
-                "bin/wp2md"
+                "bin/pake"
             ],
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "SunChaser\\WP2MD\\": "src/"
-                }
+                "files": [
+                    "lib/pake/autoload.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -84,50 +97,57 @@
             ],
             "authors": [
                 {
-                    "name": "Christian Archer",
-                    "email": "chrstnarchr@aol.com"
+                    "name": "Fabien Potencier",
+                    "email": "fabien.potencier@symfony-project.org",
+                    "homepage": "http://fabien.potencier.org/",
+                    "role": "Developer"
                 },
                 {
-                    "name": "Benjamin J. Balter"
+                    "name": "Alexey Zakhlestin",
+                    "email": "indeyets@gmail.com",
+                    "homepage": "https://indeyets.ru/",
+                    "role": "Developer"
                 }
             ],
-            "description": "Convert WordPress Plugin readme.txt to Markdown",
+            "description": "PHP automation tool inspired by Rake",
+            "homepage": "https://github.com/indeyets/pake/wiki",
             "keywords": [
-                "converter",
-                "markdown",
-                "readme",
-                "wordpress"
+                "automation",
+                "build",
+                "task"
             ],
-            "time": "2014-05-10 21:16:34"
+            "time": "2013-11-04 08:29:46"
         },
         {
             "name": "symfony/console",
-            "version": "v2.4.4",
+            "version": "v2.5.0",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "2e452005b1e1d003d23702d227e23614679eb5ca"
+                "reference": "ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/2e452005b1e1d003d23702d227e23614679eb5ca",
-                "reference": "2e452005b1e1d003d23702d227e23614679eb5ca",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c",
+                "reference": "ef4ca73b0b3a10cbac653d3ca482d0cdd4502b2c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
+                "psr/log": "~1.0",
                 "symfony/event-dispatcher": "~2.1"
             },
             "suggest": {
+                "psr/log": "For using the console logger",
                 "symfony/event-dispatcher": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -153,7 +173,56 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-27 13:34:57"
+            "time": "2014-05-22 08:54:24"
+        },
+        {
+            "name": "wpreadme2markdown/wpreadme2markdown",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benbalter/WP-Readme-to-Github-Markdown.git",
+                "reference": "dceae108111232949affc9107c98276c6fa6c98f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benbalter/WP-Readme-to-Github-Markdown/zipball/dceae108111232949affc9107c98276c6fa6c98f",
+                "reference": "dceae108111232949affc9107c98276c6fa6c98f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3.3",
+                "symfony/console": "~2.4"
+            },
+            "bin": [
+                "bin/wp2md"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WPReadme2Markdown\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Archer",
+                    "email": "chrstnarchr@aol.com"
+                },
+                {
+                    "name": "Benjamin J. Balter"
+                }
+            ],
+            "description": "Convert WordPress Plugin readme.txt to Markdown",
+            "keywords": [
+                "converter",
+                "markdown",
+                "readme",
+                "wordpress"
+            ],
+            "time": "2014-05-28 21:28:31"
         }
     ],
     "aliases": [
