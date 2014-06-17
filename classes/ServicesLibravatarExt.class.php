@@ -18,8 +18,7 @@ class ServicesLibravatarExt extends Services_Libravatar
 	 */
 	protected function processDefault($url)
 	{
-		if ($url === 'blank')
-		{
+		if ($url === 'blank') {
 			return 'blank';
 		}
 

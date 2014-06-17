@@ -46,7 +46,7 @@ class ServicesLibravatarCached extends ServicesLibravatarExt
 			$size = self::DEFAULT_SIZE;
 		}
 
-		$file_name = 'cache/'. $hash . '-'. $size;
+		$file_name = 'cache/'. $hash .'-'. $size;
 
 		$file_path = dirname($this->plugin_file) . '/' . $file_name;
 
@@ -54,8 +54,7 @@ class ServicesLibravatarCached extends ServicesLibravatarExt
 			|| filemtime($file_path) < time() - $this->cache_time
 		) {
 			// update cache
-			if (file_exists($file_path))
-			{
+			if (file_exists($file_path)) {
 				unlink($file_path);
 			}
 

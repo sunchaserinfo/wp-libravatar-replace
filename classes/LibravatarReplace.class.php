@@ -36,16 +36,11 @@ class LibravatarReplace
 	 */
 	private function isSsl()
 	{
-		if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off')
-		{
+		if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
 			return true;
-		}
-		elseif ($_SERVER['SERVER_PORT'] == 443)
-		{
+		} elseif ($_SERVER['SERVER_PORT'] == 443) {
 			return true;
-		}
-		else
-		{
+		} else {
 			return false;
 		}
 	}
@@ -72,7 +67,7 @@ class LibravatarReplace
 	 */
 	public function filterDefaultAvatarSelect($avatar_list)
 	{
-		return preg_replace('~/[a-f0-9]{32}~', '/'.str_repeat('0', 32), $avatar_list); // fill hash with zeros
+		return preg_replace('~/[a-f0-9]{32}~', '/'. str_repeat('0', 32), $avatar_list); // fill hash with zeros
 	}
 
 	/**
@@ -87,43 +82,30 @@ class LibravatarReplace
 	 */
 	public function filterGetAvatar($avatar, $id_or_email, $size, $default, $alt)
 	{
-		if (false === $alt)
-		{
+		if (false === $alt) {
 			$safe_alt = '';
-		}
-		else
-		{
+		} else {
 			$safe_alt = esc_attr($alt);
 		}
 
 		$email = '';
-		if (is_numeric($id_or_email))
-		{
+		if (is_numeric($id_or_email)) {
 			$id = (int)$id_or_email;
 			$user = get_userdata($id);
-			if ($user)
-			{
+			if ($user) {
 				$email = $user->user_email;
 			}
-		}
-		elseif (is_object($id_or_email))
-		{
-			if (!empty($id_or_email->user_id))
-			{
+		} elseif (is_object($id_or_email)) {
+			if (!empty($id_or_email->user_id)) {
 				$id = (int)$id_or_email->user_id;
 				$user = get_userdata($id);
-				if ($user)
-				{
+				if ($user) {
 					$email = $user->user_email;
 				}
-			}
-			elseif (!empty($id_or_email->comment_author_email))
-			{
+			} elseif (!empty($id_or_email->comment_author_email)) {
 				$email = $id_or_email->comment_author_email;
 			}
-		}
-		else
-		{
+		} else {
 			$email = $id_or_email;
 		}
 
@@ -134,8 +116,7 @@ class LibravatarReplace
 		$options['algorithm'] = 'md5';
 		$options['https'] = $this->isSsl();
 
-		if ($default && $default !== 'gravatar_default')
-		{
+		if ($default && $default !== 'gravatar_default') {
 			$options['default'] = $default;
 		}
 		$url = $libravatar->getUrl($email, $options);
@@ -170,8 +151,7 @@ class LibravatarReplace
 	{
 		$default_host = $this->isSsl() ? 'https://seccdn.libravatar.org/avatar/' : 'http://cdn.libravatar.org/avatar/';
 
-		if (empty($this->bp_catched_last_email))
-		{
+		if (empty($this->bp_catched_last_email)) {
 			return $default_host;
 		}
 
@@ -193,12 +173,9 @@ class LibravatarReplace
 	 */
 	private function getLibravatarClass()
 	{
-		if ($this->isLocalCacheEnabled())
-		{
+		if ($this->isLocalCacheEnabled()) {
 			return new ServicesLibravatarCached($this->plugin_file);
-		}
-		else
-		{
+		} else {
 			return new ServicesLibravatarExt();
 		}
 	}
