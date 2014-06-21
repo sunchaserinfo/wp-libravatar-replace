@@ -203,6 +203,15 @@ class LibravatarReplace
 		register_setting(self::MODULE_NAME, self::OPTION_LOCAL_CACHE_ENABLED);
 	}
 
+	public function registerActions($links, $file)
+	{
+		if ($file === plugin_basename($this->plugin_file)) {
+			$links[] = '<a href="options-general.php?page=libravatar-replace">' . __('Settings') . '</a>';
+		}
+
+		return $links;
+	}
+
 	/**
 	 * Render the admin page
 	 */

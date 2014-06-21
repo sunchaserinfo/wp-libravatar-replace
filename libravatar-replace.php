@@ -30,6 +30,7 @@ $libravatarReplace = new LibravatarReplace(__FILE__);
 add_action('init',                      array($libravatarReplace, 'init'));
 add_action('admin_menu',                array($libravatarReplace, 'registerAdminMenu'), 0);
 add_action('admin_init',                array($libravatarReplace, 'registerSettings'));
+add_filter('plugin_action_links',       array($libravatarReplace, 'registerActions'), 10, 2);
 
 add_filter('get_avatar',                array($libravatarReplace, 'filterGetAvatar'), 10, 5);
 add_filter('avatar_defaults',           array($libravatarReplace, 'filterAvatarDefaults'));
