@@ -6,11 +6,11 @@
 **Stable tag:** trunk  
 **License:** ISC  
 
-Replaces Gravatar with Libravatar in your WordPress installation.
+Replaces Gravatars with Libravatars in your WordPress installation.
 
 ## Description ##
 
-Adds [Libravatar](http://www.libravatar.org/) avatars support to your WordPress installation.
+Replaces Gravatars with [Libravatars](http://www.libravatar.org/) in your WordPress installation.
 Libravatar is an alternative to Gravatar and its API is mostly compatible.
 
 **Warning!** The plugin is incompatible with it's predecessor, the
@@ -40,6 +40,18 @@ PHP 5.2.4, WordPress 3.8.
 
 The plugin is tested down to WordPress 2.7 but I will not support anything but current and prevoius releases.
 The plugin will not work under WordPress 2.6 and earlier.
+
+## Screenshots ##
+
+###1. Libravatars are shown instead of Gravatars###
+![Libravatars are shown instead of Gravatars](https://ps.w.org/libravatar-replace/assets/screenshot-1.png)
+
+###2. Libravatars are configured on the same page as Gravatars, rating however is ignored###
+![Libravatars are configured on the same page as Gravatars, rating however is ignored](https://ps.w.org/libravatar-replace/assets/screenshot-2.png)
+
+###3. Specific Libravatar settings page###
+![Specific Libravatar settings page](https://ps.w.org/libravatar-replace/assets/screenshot-3.png)
+
 
 ## Thanks to ##
 * Gabriel Hautclocq, author of the initial plugin
