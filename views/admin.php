@@ -15,6 +15,12 @@
 			<label for="cache-enabled"><?php _e('Use local cache for images', 'libravatar-replace') ?> <?php _e('(experimental)', 'libravatar-replace') ?></label>
 		</p>
 
+		<p>
+			<input type="checkbox" name="<?php echo LibravatarReplace::OPTION_RETINA_ENABLED ?>" id="retina-enabled" value="1"
+				<?php if(get_option(LibravatarReplace::OPTION_RETINA_ENABLED, LibravatarReplace::OPTION_RETINA_ENABLED_DEFAULT)): ?>checked="checked"<?php endif ?>/>
+			<label for="retina-enabled"><?php _e('Use double-sized avatars on Retina screen', 'libravatar-replace') ?> <?php _e('(experimental)', 'libravatar-replace') ?></label>
+		</p>
+
 		<p class="submit">
 			<input type="submit" class="button-primary" value="<?php _e('Save Changes', 'libravatar-replace') ?>" />
 		</p>

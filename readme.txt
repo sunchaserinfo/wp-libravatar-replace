@@ -124,6 +124,9 @@ The major component of the plugin is Services_Libravatar PHP library
 
 == Changelog ==
 
+= 3.1.0 =
+* Retina support (experimental)
+
 = 3.0.0 =
 * Optional local cache (experimental)
 * Options page
@@ -164,6 +167,9 @@ The major component of the plugin is Services_Libravatar PHP library
 * Initial fork of the Libravatar plugin
 
 == Upgrade Notice ==
+
+= 3.1.0 =
+You may want to enable the Retina support in the settings
 
 = 2.0.0 =
 * Thank you for using the Libravatar Replace plugin!
