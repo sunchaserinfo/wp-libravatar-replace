@@ -1,6 +1,6 @@
 # Libravatar Replace #
 **Contributors:** sunchaserinfo  
-**Tags:** libravatar, avatar, support, user, email, pseudo, picture, image, buddypress, retina  
+**Tags:** libravatar, avatar, email, picture, image, buddypress, retina  
 **Requires at least:** 2.8  
 **Tested up to:** 3.9  
 **Stable tag:** trunk  
@@ -129,6 +129,9 @@ The major component of the plugin is Services_Libravatar PHP library
     THE SOFTWARE.
 
 ## Changelog ##
+
+### 3.1.1 ###
+* Fix avatar icon in the header
 
 ### 3.1.0 ###
 * Retina support (experimental)
