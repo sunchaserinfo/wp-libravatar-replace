@@ -1,6 +1,6 @@
 === Libravatar Replace ===
 Contributors: sunchaserinfo
-Tags: libravatar, avatar, support, user, email, pseudo, picture, image, buddypress
+Tags: libravatar, avatar, support, user, email, pseudo, picture, image, buddypress, retina
 Requires at least: 2.8
 Tested up to: 3.9
 Stable tag: trunk
