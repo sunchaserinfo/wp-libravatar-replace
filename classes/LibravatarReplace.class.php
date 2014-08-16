@@ -150,10 +150,15 @@ class LibravatarReplace
 
 			return <<<HTML
 				<style>
-					#{$id} { background-image: url({$url}); background-size: 100%; width: {$size}px; height: {$size}px; }
+					#{$id} {
+						background-image: url({$url}) !important;
+						background-size: 100% !important;
+						width: {$size}px;
+						height: {$size}px;
+					}
 				</style>
 				<style media="(min-resolution: 1.5dppx)">
-					#{$id} { background-image: url({$url_large}); }
+					#{$id} { background-image: url({$url_large}) !important; }
 				</style>
 				<img id="$id" alt="{$alt}" class="avatar avatar-{$size} photo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
 HTML;
