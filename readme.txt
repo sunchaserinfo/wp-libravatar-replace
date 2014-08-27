@@ -2,7 +2,7 @@
 Contributors: sunchaserinfo
 Tags: libravatar, avatar, email, picture, image, buddypress, retina
 Requires at least: 2.8
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: trunk
 License: ISC
 
@@ -123,6 +123,9 @@ The major component of the plugin is Services_Libravatar PHP library
     THE SOFTWARE.
 
 == Changelog ==
+
+= 3.1.2 =
+* Fix smooth images in Twenty Thirteen
 
 = 3.1.1 =
 * Fix avatar icon in the header
