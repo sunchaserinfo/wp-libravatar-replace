@@ -153,6 +153,7 @@ class LibravatarReplace
 					#{$id} {
 						background-image: url({$url}) !important;
 						background-size: 100% !important;
+						padding: 0 !important;
 						width: {$size}px;
 						height: {$size}px;
 					}
