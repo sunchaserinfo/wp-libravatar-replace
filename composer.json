@@ -8,6 +8,9 @@
 		"name": "Christian Archer",
 		"email": "chrstnarchr@aol.com"
 	}],
+	"scripts": {
+		"pake": "pake"
+	},
 	"require": {
 		"sunchaser/services-libravatar": ">= 0.2.3"
 	},
