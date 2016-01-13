@@ -1,10 +1,10 @@
 # Libravatar Replace #
-**Contributors:** sunchaserinfo
-**Tags:** libravatar, avatar, email, picture, image, buddypress, retina
-**Requires at least:** 2.8
-**Tested up to:** 4.4
-**Stable tag:** trunk
-**License:** ISC
+**Contributors:** sunchaserinfo  
+**Tags:** libravatar, avatar, email, picture, image, buddypress, retina  
+**Requires at least:** 2.8  
+**Tested up to:** 4.4  
+**Stable tag:** trunk  
+**License:** ISC  
 
 Replaces Gravatars with Libravatars in your WordPress installation.
 
@@ -24,19 +24,19 @@ Just extract the plugin directory into your *wp-content/plugins* directory.
 
 (available since 2.0.3.1)
 
-If you are using Composer to manage your plugins, require sunchaser/libravatar package.
+If you are using Composer to manage your plugins, require sunchaser/wp-libravatar-replace package.
 You should use composer/installers to ensure that the plugin will be installed to the correct path.
 
     {
         "require": {
-            "sunchaser/libravatar": "dev-master",
+            "sunchaser/wp-libravatar-replace": "dev-master",
             "composer/installers": "~1.0"
         }
     }
 
 ## Frequently Asked Questions ##
 ### What are the requirements of this plugin? ###
-PHP 5.2.4, WordPress 3.8.
+PHP 5.2.4, WordPress 4.3.
 
 The plugin is tested down to WordPress 2.8 but I will not support anything but current and prevoius releases.
 The plugin will not work under WordPress 2.7 and earlier.
@@ -129,6 +129,11 @@ The major component of the plugin is Services_Libravatar PHP library
     THE SOFTWARE.
 
 ## Changelog ##
+
+### 3.2.0 ###
+* We are now on GitHub!
+* Retina support moved from crazy styles to srcset
+* Retina support is now a core function, option removed
 
 ### 3.1.2 ###
 * Fix smooth images in Twenty Thirteen

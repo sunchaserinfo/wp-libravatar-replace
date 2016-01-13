@@ -21,9 +21,6 @@ class LibravatarReplace
     const OPTION_LOCAL_CACHE_ENABLED = 'libravatar_replace_cache_enabled';
     const OPTION_LOCAL_CACHE_ENABLED_DEFAULT = 0;
 
-    const OPTION_RETINA_ENABLED = 'libravatar_retina_enabled';
-    const OPTION_RETINA_ENABLED_DEFAULT = 0;
-
     public function __construct($plugin_file)
     {
         $this->plugin_file = $plugin_file;
@@ -141,32 +138,31 @@ class LibravatarReplace
 
         $url = $libravatar->getUrl($email, $options); // get normal size avatar
 
-        if ($this->isRetinaEnabled()) {
-            $id = uniqid('libravatar-');
+        $srcset = array();
 
-            $options['size'] = $size * 2;
+        $size_last = false;
+        foreach (array(1, '1.5', 2, 3, 4) as $mul) { // use 1.5 as string to avoid regional conversions
+            $src_size = intval($size * $mul);
 
-            $url_large = $libravatar->getUrl($email, $options); // get double size avatar
+            if ($src_size >= 512) {
+                $src_size   = 512;
+                $size_last  = true;
+            }
 
-            return <<<HTML
-                <style>
-                    #{$id} {
-                        background-image: url({$url}) !important;
-                        background-size: 100% !important;
-                        padding: 0 !important;
-                        width: {$size}px;
-                        height: {$size}px;
-                    }
-                </style>
-                <style media="(min-resolution: 1.5dppx)">
-                    #{$id} { background-image: url({$url_large}) !important; }
-                </style>
-                <img id="$id" alt="{$alt}" class="avatar avatar-{$size} photo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-HTML;
+            $options['size'] = $src_size;
 
-        } else {
-            return "<img alt='{$alt}' src='{$url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+            $src_url = $libravatar->getUrl($email, $options);
+
+            $srcset []= "{$src_url} {$mul}x";
+
+            if ($size_last) {
+                break;
+            }
         }
+
+        $set_urls = implode(',', $srcset);
+
+        return "<img alt='{$alt}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' src='{$url}' srcset='{$set_urls}' />";
     }
 
     /**
@@ -192,7 +188,7 @@ HTML;
      */
     public function filterBPGravatarUrl()
     {
-        $default_host = $this->isSsl() ? 'https://seccdn.libravatar.org/avatar/' : 'http://cdn.libravatar.org/avatar/';
+        $default_host = 'https://seccdn.libravatar.org/avatar/';
 
         if (empty($this->bp_catched_last_email)) {
             return $default_host;
@@ -244,7 +240,6 @@ HTML;
     public function registerSettings()
     {
         register_setting(self::MODULE_NAME, self::OPTION_LOCAL_CACHE_ENABLED);
-        register_setting(self::MODULE_NAME, self::OPTION_RETINA_ENABLED);
     }
 
     public function registerActions($links, $file)
@@ -272,15 +267,5 @@ HTML;
     private function isLocalCacheEnabled()
     {
         return get_option(self::OPTION_LOCAL_CACHE_ENABLED, self::OPTION_LOCAL_CACHE_ENABLED_DEFAULT) ? true : false;
-    }
-
-    /**
-     * Get retina support enabled option
-     *
-     * @return bool
-     */
-    private function isRetinaEnabled()
-    {
-        return get_option(self::OPTION_RETINA_ENABLED, self::OPTION_RETINA_ENABLED_DEFAULT) ? true : false;
     }
 }
