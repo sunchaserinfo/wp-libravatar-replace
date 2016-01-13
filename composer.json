@@ -1,25 +1,25 @@
 {
-	"name": "sunchaser/libravatar",
-	"description": "Libravatar Replace. A WordPress plugin that adds Libravatar avatars support to your WordPress installation",
-	"keywords": ["libravatar", "avatar", "wordpress", "buddypress"],
-	"type": "wordpress-plugin",
-	"license": ["ISC"],
-	"authors": [{
-		"name": "Christian Archer",
-		"email": "chrstnarchr@aol.com"
-	}],
-	"scripts": {
-		"pake": "pake"
-	},
-	"require": {
-		"sunchaser/services-libravatar": ">= 0.2.3"
-	},
-	"require-dev": {
-		"wpreadme2markdown/wpreadme2markdown": ">= 1.0.0",
-		"indeyets/pake": "~1.99"
-	},
-	"conflict": {
-		"wpackagist-plugin/libravatar": "*",
-		"wpackagist-plugin/libravatar-replace": "*"
-	}
+    "name": "sunchaser/libravatar",
+    "description": "Libravatar Replace. A WordPress plugin that adds Libravatar avatars support to your WordPress installation",
+    "keywords": ["libravatar", "avatar", "wordpress", "buddypress"],
+    "type": "wordpress-plugin",
+    "license": ["ISC"],
+    "authors": [{
+        "name": "Christian Archer",
+        "email": "chrstnarchr@aol.com"
+    }],
+    "scripts": {
+        "pake": "pake"
+    },
+    "require": {
+        "sunchaser/services-libravatar": ">= 0.2.3"
+    },
+    "require-dev": {
+        "wpreadme2markdown/wpreadme2markdown": ">= 1.0.0",
+        "indeyets/pake": "~1.99"
+    },
+    "conflict": {
+        "wpackagist-plugin/libravatar": "*",
+        "wpackagist-plugin/libravatar-replace": "*"
+    }
 }
