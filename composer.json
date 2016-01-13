@@ -1,5 +1,5 @@
 {
-    "name": "sunchaser/libravatar",
+    "name": "sunchaser/wp-libravatar-replace",
     "description": "Libravatar Replace. A WordPress plugin that adds Libravatar avatars support to your WordPress installation",
     "keywords": ["libravatar", "avatar", "wordpress", "buddypress"],
     "type": "wordpress-plugin",
