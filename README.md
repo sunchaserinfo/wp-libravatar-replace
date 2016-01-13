@@ -1,10 +1,10 @@
 # Libravatar Replace #
-**Contributors:** sunchaserinfo  
-**Tags:** libravatar, avatar, email, picture, image, buddypress, retina  
-**Requires at least:** 2.8  
-**Tested up to:** 4.1  
-**Stable tag:** trunk  
-**License:** ISC  
+**Contributors:** sunchaserinfo
+**Tags:** libravatar, avatar, email, picture, image, buddypress, retina
+**Requires at least:** 2.8
+**Tested up to:** 4.4
+**Stable tag:** trunk
+**License:** ISC
 
 Replaces Gravatars with Libravatars in your WordPress installation.
 
