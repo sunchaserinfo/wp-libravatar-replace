@@ -12,13 +12,13 @@
 
 // security check
 if (!defined('WP_PLUGIN_DIR')) {
-	die('There is nothing to see here!');
+    die('There is nothing to see here!');
 }
 
 // if file exists, require it. otherwise assume it's autoload
 // WARNING: do not check class existence instead of file existence or you will crash WordPress if both Libravatar and Libravatar Replace are active
 if (is_file(dirname(__FILE__) . '/classes/ServicesLibravatar.class.php')) {
-	require_once dirname(__FILE__) . '/classes/ServicesLibravatar.class.php';
+    require_once dirname(__FILE__) . '/classes/ServicesLibravatar.class.php';
 }
 
 require_once dirname(__FILE__) . '/classes/ServicesLibravatarExt.class.php'; // Services_Libravatar custom extensions
