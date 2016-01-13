@@ -1,0 +1,9 @@
+/.idea
+/vendor
+/classes/Services_Libravatar.php
+/classes/ServicesLibravatar.class.php
+/build
+
+*.iml
+composer.phar
+*.mo
