@@ -8,6 +8,8 @@
  * Author: Christian Archer
  * Author URI: https://sunchaser.info/
  * License: ISC
+ * Text Domain: libravatar-replace
+ * Domain Path: /languages
  */
 
 // security check
