@@ -2,7 +2,7 @@
 **Contributors:** sunchaserinfo  
 **Tags:** libravatar, avatar, email, picture, image, buddypress, retina  
 **Requires at least:** 2.8  
-**Tested up to:** 4.4  
+**Tested up to:** 4.5  
 **Stable tag:** trunk  
 **License:** ISC  
 
@@ -66,7 +66,7 @@ some code under separate licenses
 
 This license covers the difference between Libravatar and Libravatar Replace
 
-    Copyright © 2013 Christian Archer
+    Copyright (c) 2013 Christian Archer
 
     Permission to use, copy, modify, and/or distribute this software
     for any purpose with or without fee is hereby granted, provided
