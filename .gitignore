@@ -3,6 +3,7 @@
 /classes/Services_Libravatar.php
 /classes/ServicesLibravatar.class.php
 /build
+/wordpress
 
 *.iml
 composer.phar

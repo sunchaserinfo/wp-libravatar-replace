@@ -15,6 +15,7 @@
         "sunchaser/services-libravatar": ">= 0.2.3"
     },
     "require-dev": {
+        "johnpbloch/wordpress": "dev-master",
         "wpreadme2markdown/wpreadme2markdown": ">= 1.0.0",
         "indeyets/pake": "~1.99"
     },
