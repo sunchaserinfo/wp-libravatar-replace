@@ -9,7 +9,8 @@
         "email": "chrstnarchr@aol.com"
     }],
     "scripts": {
-        "pake": "pake"
+        "pake": "pake",
+        "wp2md": "wp2md"
     },
     "require": {
         "sunchaser/services-libravatar": ">= 0.2.3"
