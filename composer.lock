@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "33b8408acb64d584088f38bb64d42b0d",
-    "content-hash": "102e7609199f17ac0eb8ccf31f00a6a8",
+    "hash": "4290ee45f4f4904a9468b0818e4218cd",
+    "content-hash": "79faf5a46a45fb8b61a34bbafe1c11bf",
     "packages": [
         {
             "name": "sunchaser/services-libravatar",
@@ -125,12 +125,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "d4a687653fd88d04cafc02477884e6fcea14942d"
+                "reference": "f9b9c33d9b4253f05151c95726db9c19d6a8d2ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/d4a687653fd88d04cafc02477884e6fcea14942d",
-                "reference": "d4a687653fd88d04cafc02477884e6fcea14942d",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/f9b9c33d9b4253f05151c95726db9c19d6a8d2ff",
+                "reference": "f9b9c33d9b4253f05151c95726db9c19d6a8d2ff",
                 "shasum": ""
             },
             "require": {
@@ -155,7 +155,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2016-04-10 05:31:20"
+            "time": "2016-05-21 02:46:25"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -206,17 +206,71 @@
             "time": "2015-06-11 15:15:30"
         },
         {
-            "name": "symfony/console",
-            "version": "v2.8.4",
+            "name": "sllh/composer-versions-check",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "9a5aef5fc0d4eff86853d44202b02be8d5a20154"
+                "url": "https://github.com/Soullivaneuh/composer-versions-check.git",
+                "reference": "4810ab669723609a74bbf6c515d1aac2bd6562d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/9a5aef5fc0d4eff86853d44202b02be8d5a20154",
-                "reference": "9a5aef5fc0d4eff86853d44202b02be8d5a20154",
+                "url": "https://api.github.com/repos/Soullivaneuh/composer-versions-check/zipball/4810ab669723609a74bbf6c515d1aac2bd6562d3",
+                "reference": "4810ab669723609a74bbf6c515d1aac2bd6562d3",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": "^5.3 || ^7.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0",
+                "sllh/php-cs-fixer-styleci-bridge": "^2.0",
+                "symfony/phpunit-bridge": "^2.7.4|^3.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "SLLH\\ComposerVersionsCheck\\VersionsCheckPlugin",
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SLLH\\ComposerVersionsCheck\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sullivan SENECHAL",
+                    "email": "soullivaneuh@gmail.com"
+                }
+            ],
+            "description": "Checks if packages are up to date to last major versions after update",
+            "keywords": [
+                "composer",
+                "plugin",
+                "update",
+                "versions"
+            ],
+            "time": "2016-04-29 17:38:05"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.8.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "48221d3de4dc22d2cd57c97e8b9361821da86609"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/48221d3de4dc22d2cd57c97e8b9361821da86609",
+                "reference": "48221d3de4dc22d2cd57c97e8b9361821da86609",
                 "shasum": ""
             },
             "require": {
@@ -263,20 +317,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-03-17 09:19:04"
+            "time": "2016-04-26 12:00:47"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "1289d16209491b584839022f29257ad859b8532d"
+                "reference": "dff51f72b0706335131b00a7f49606168c582594"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/1289d16209491b584839022f29257ad859b8532d",
-                "reference": "1289d16209491b584839022f29257ad859b8532d",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
+                "reference": "dff51f72b0706335131b00a7f49606168c582594",
                 "shasum": ""
             },
             "require": {
@@ -288,7 +342,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -322,7 +376,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2016-05-18 14:26:46"
         },
         {
             "name": "wpreadme2markdown/wpreadme2markdown",
