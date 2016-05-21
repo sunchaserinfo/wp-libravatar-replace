@@ -130,6 +130,9 @@ The major component of the plugin is Services_Libravatar PHP library
 
 ## Changelog ##
 
+### 3.2.1 ###
+* Fixed exception on unknown avatar default
+
 ### 3.2.0 ###
 * We are now on GitHub!
 * Retina support moved from crazy styles to srcset
