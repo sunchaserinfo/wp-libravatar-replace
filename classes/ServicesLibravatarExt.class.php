@@ -22,6 +22,11 @@ class ServicesLibravatarExt extends Services_Libravatar
             return 'blank';
         }
 
-        return parent::processDefault($url);
+        try {
+            return parent::processDefault($url);
+        } catch (InvalidArgumentException $e) {
+            // do not fail if the default is incorrect, just ignore it
+            return null;
+        }
     }
 }
