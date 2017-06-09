@@ -2,7 +2,7 @@
 Contributors: sunchaserinfo
 Tags: libravatar, avatar, email, picture, image, buddypress, retina
 Requires at least: 2.8
-Tested up to: 4.5
+Tested up to: 4.8
 Stable tag: trunk
 License: ISC
 
