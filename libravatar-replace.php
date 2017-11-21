@@ -4,7 +4,7 @@
  * Plugin Name: Libravatar Replace
  * Plugin URI: https://github.com/sunchaserinfo/wp-libravatar-replace
  * Description: Libravatar support for WordPress and BuddyPress
- * Version: 3.2.1
+ * Version: 3.2.2
  * Author: Christian Archer
  * Author URI: https://sunchaser.info/
  * License: ISC
