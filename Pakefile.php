@@ -5,7 +5,7 @@ pake_task('readme');
 
 function run_readme()
 {
-    pake_sh('vendor/bin/wp2md convert -i readme.txt -o README.md');
+    pake_sh('vendor/bin/wp2md -i readme.txt -o README.md');
 }
 
 pake_desc('Build language files');

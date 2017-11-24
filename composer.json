@@ -17,7 +17,7 @@
     },
     "require-dev": {
         "johnpbloch/wordpress": "*",
-        "wpreadme2markdown/wpreadme2markdown": ">= 1.0.0",
+        "wpreadme2markdown/wp2md": ">= 3.0",
         "indeyets/pake": "~1.99",
         "sllh/composer-versions-check": "^2.0"
     },
