@@ -29,4 +29,19 @@ class ServicesLibravatarExt extends Services_Libravatar
             return null;
         }
     }
+
+    protected function srvGet($domain, $https = false)
+    {
+        $cacheKey = 'srv:' . $domain . ':' . ($https ? '1' : '0');
+        $cacheGroup = 'libravatar-replace';
+
+        $srv = wp_cache_get($cacheKey, $cacheGroup, false, $found);
+
+        if (!$found) {
+            $srv = parent::srvGet($domain, $https);
+            wp_cache_set($cacheKey, $srv, $cacheGroup, 43200 + rand(0, 21600)); // cache for 12-18 hours
+        }
+
+        return $srv;
+    }
 }
