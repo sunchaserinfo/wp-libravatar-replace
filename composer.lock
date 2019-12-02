@@ -604,16 +604,16 @@
         },
         {
             "name": "wpreadme2markdown/wp2md",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpreadme2markdown/wp2md.git",
-                "reference": "c00f5a38df8bb38e49b85cc6d1fae50dafa0ce54"
+                "reference": "d87a617d72bc20d6c5e08c7204fe07bad8a8e7a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpreadme2markdown/wp2md/zipball/c00f5a38df8bb38e49b85cc6d1fae50dafa0ce54",
-                "reference": "c00f5a38df8bb38e49b85cc6d1fae50dafa0ce54",
+                "url": "https://api.github.com/repos/wpreadme2markdown/wp2md/zipball/d87a617d72bc20d6c5e08c7204fe07bad8a8e7a2",
+                "reference": "d87a617d72bc20d6c5e08c7204fe07bad8a8e7a2",
                 "shasum": ""
             },
             "require": {
@@ -655,7 +655,7 @@
                 "readme",
                 "wordpress"
             ],
-            "time": "2019-11-24T09:58:29+00:00"
+            "time": "2019-12-02T21:26:35+00:00"
         },
         {
             "name": "wpreadme2markdown/wpreadme2markdown",
