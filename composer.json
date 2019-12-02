@@ -9,7 +9,8 @@
         "email": "chrstnarchr@aol.com"
     }],
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "optimize-autoloader": true
     },
     "require": {
         "php": ">= 5.2",
