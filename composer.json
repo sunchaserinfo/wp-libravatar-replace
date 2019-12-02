@@ -8,11 +8,15 @@
         "name": "Christian Archer",
         "email": "chrstnarchr@aol.com"
     }],
+    "config": {
+        "sort-packages": true
+    },
     "scripts": {
         "pake": "pake",
         "wp2md": "wp2md"
     },
     "require": {
+        "php": ">= 5.2",
         "pear/services_libravatar": ">= 0.2.3"
     },
     "require-dev": {

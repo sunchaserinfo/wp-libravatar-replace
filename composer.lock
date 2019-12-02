@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57c7a06b03880a0e24525712290320fb",
+    "content-hash": "e62995ce9f083b33a089d508a71ab0d4",
     "packages": [
         {
             "name": "pear/services_libravatar",
@@ -708,6 +708,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">= 5.2"
+    },
     "platform-dev": []
 }
