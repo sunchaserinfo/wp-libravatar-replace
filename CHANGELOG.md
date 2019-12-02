@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 3.3.0
+
+* Use the WP Object Cache to cache DNS responses (Fix [#2])
+
+[#2]: https://github.com/sunchaserinfo/wp-libravatar-replace/issues/2
+
 ## 3.2.2
 
 * Updated plugin homepage URL
