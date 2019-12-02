@@ -11,10 +11,6 @@
     "config": {
         "sort-packages": true
     },
-    "scripts": {
-        "pake": "pake",
-        "readme": "wp2md -i readme.txt -o README.md"
-    },
     "require": {
         "php": ">= 5.2",
         "pear/services_libravatar": ">= 0.2.3"
