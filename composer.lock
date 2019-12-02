@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e62995ce9f083b33a089d508a71ab0d4",
+    "content-hash": "75e3f69e8b03a5d1c735cb391c1855a9",
     "packages": [
         {
             "name": "pear/services_libravatar",

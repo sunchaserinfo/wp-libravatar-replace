@@ -16,10 +16,10 @@
         "pear/services_libravatar": ">= 0.2.3"
     },
     "require-dev": {
-        "johnpbloch/wordpress": "*",
-        "wpreadme2markdown/wp2md": ">= 3.0",
         "indeyets/pake": "~1.99",
-        "sllh/composer-versions-check": "^2.0"
+        "johnpbloch/wordpress": "*",
+        "sllh/composer-versions-check": "^2.0",
+        "wpreadme2markdown/wp2md": ">= 3.0"
     },
     "conflict": {
         "wpackagist-plugin/libravatar": "*",
