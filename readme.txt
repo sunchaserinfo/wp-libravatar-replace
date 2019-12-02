@@ -28,12 +28,8 @@ Just extract the plugin directory into your *wp-content/plugins* directory.
 If you are using Composer to manage your plugins, require sunchaser/wp-libravatar-replace package.
 You should use composer/installers to ensure that the plugin will be installed to the correct path.
 
-    {
-        "require": {
-            "sunchaser/wp-libravatar-replace": "dev-master",
-            "composer/installers": "~1.0"
-        }
-    }
+    composer require composer/installers
+    composer require sunchaser/wp-libravatar-replace
 
 == Frequently Asked Questions ==
 = What are the requirements of this plugin? =
@@ -41,6 +37,10 @@ PHP 5.2.4, WordPress 4.3.
 
 The plugin is tested down to WordPress 2.8 but I will not support anything but current and prevoius releases.
 The plugin will not work under WordPress 2.7 and earlier.
+
+Please also add
+a [persistent caching plugin](https://codex.wordpress.org/Class_Reference/WP_Object_Cache#Persistent_Caching)
+to increase performance.
 
 == Screenshots ==
 
@@ -82,4 +82,4 @@ some code under separate licenses.
 
 == Changelog ==
 
-Full changelog can be found on [GitHub](https://github.com/sunchaserinfo/wp-libravatar-replace/releases)
+Full changelog can be found on [GitHub](https://github.com/sunchaserinfo/wp-libravatar-replace/blob/master/CHANGELOG.md)

@@ -13,7 +13,7 @@
     },
     "scripts": {
         "pake": "pake",
-        "wp2md": "wp2md"
+        "readme": "wp2md -i readme.txt -o README.md"
     },
     "require": {
         "php": ">= 5.2",
