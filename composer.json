@@ -13,7 +13,7 @@
         "wp2md": "wp2md"
     },
     "require": {
-        "sunchaser/services-libravatar": ">= 0.2.3"
+        "pear/services_libravatar": ">= 0.2.3"
     },
     "require-dev": {
         "johnpbloch/wordpress": "*",
