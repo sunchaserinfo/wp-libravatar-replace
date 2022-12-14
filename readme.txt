@@ -21,16 +21,6 @@ Libravatar is an alternative to Gravatar and its API is mostly compatible.
 
 Just extract the plugin directory into your *wp-content/plugins* directory.
 
-= via Composer =
-
-(available since 2.0.3.1)
-
-If you are using Composer to manage your plugins, require sunchaser/wp-libravatar-replace package.
-You should use composer/installers to ensure that the plugin will be installed to the correct path.
-
-    composer require composer/installers
-    composer require sunchaser/wp-libravatar-replace
-
 == Frequently Asked Questions ==
 = What are the requirements of this plugin? =
 PHP 5.2.4, WordPress 4.3.
